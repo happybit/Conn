@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Conn</string>
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_data_on">On</string>
+    <string name="button_data_off">Off</string>
+    <string name="button_data_conn">Connect</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="airplane_mode_warning">Your device is in Airplane Mode. Please turn it off!</string>
+    <string name="wifi_connected_warning">Your device has already connected to WiFi. No need to connect mobile data!</string>
+    <string name="max_retrans_warning">Have tried 10 times. Please try again!</string>
+    <string name="data_connected_notif">Mobile data is connected!</string>
+    <string name="other_warning">Something wrong with it!</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="widget_button">C</string>
+</resources>
