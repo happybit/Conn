@@ -66,39 +66,13 @@ public class ConnectFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        // Set title bar
+        ((MainActivity) getActivity())
+                .setActionBarTitle("Conn");
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_connect, container, false);
-
-        /* Button mButtonDataOn = (Button) view.findViewById(R.id.button_data_on);
-        mButtonDataOn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // here you set what you want to do when user clicks your button,
-                DataConn dataConnOn = new DataConn(getActivity());
-                dataConnOn.setMobileDataConnection(true);
-            }
-        });
-
-        Button mButtonDataOff = (Button) view.findViewById(R.id.button_data_on);
-        mButtonDataOff.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // here you set what you want to do when user clicks your button,
-                DataConn dataConnOff = new DataConn(getActivity());
-                dataConnOff.setMobileDataConnection(false);
-            }
-        });
-
-        Button mButtonDataConn = (Button) view.findViewById(R.id.button_data_conn);
-        mButtonDataConn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // here you set what you want to do when user clicks your button,
-                KeepConnect keepConnect = new KeepConnect(getActivity());
-                keepConnect.execute();
-            }
-        }); */
-
         return view;
     }
 

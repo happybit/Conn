@@ -134,4 +134,7 @@ public class MainActivity extends ActionBarActivity
         keepConnect.execute();
     }
 
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
+    }
 }

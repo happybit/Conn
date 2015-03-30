@@ -1,9 +1,108 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="me.pzheng.conn.AboutFragment">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="me.pzheng.conn.AboutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:id="@+id/logo_icon"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo_icon"
+                android:paddingTop="20sp"
+                android:paddingBottom="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/app_name"
+                android:textStyle="bold"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/author"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/author"
+                android:paddingTop="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/website"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/website"
+                android:autoLink="web"
+                android:paddingTop="15sp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/copy_right"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/right_reserved"
+                android:paddingBottom="10sp"
+                android:paddingTop="15sp"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/divider_horizontal_bright"
+                android:scaleType="fitXY"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/license"
+                android:layout_gravity="center_horizontal"
+                android:text="License"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="&#8226; FloatingActionButton"
+                android:paddingLeft="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://github.com/makovkastar/FloatingActionButton"
+                android:autoLink="web"
+                android:paddingLeft="28sp"
+                android:paddingBottom="10sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="&#8226; android-material-drawer-template"
+                android:paddingLeft="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://github.com/kanytu/android-material-drawer-template"
+                android:autoLink="web"
+                android:paddingLeft="28sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
