@@ -35,6 +35,23 @@
             android:name=".WidgetIntentService"
             android:exported="false" >
         </service>
+
+        <activity
+            android:name=".DisplayCreditsActivity"
+            android:label="@string/title_activity_display_credits"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.pzheng.conn.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayLicenseActivity"
+            android:label="@string/title_activity_display_license"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.pzheng.conn.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

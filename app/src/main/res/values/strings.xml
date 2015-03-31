@@ -20,5 +20,44 @@
     <string name="author">Author: pzheng</string>
     <string name="website">http://conn.pzheng.me</string>
     <string name="right_reserved">\u00A9 2012-2015 pzheng.me. All rights reserved.</string>
+    <string name="title_activity_display_credits">Credits</string>
+    <string name="title_activity_display_license">License</string>
+    <string name="floatingactionbutton_credit">The MIT License (MIT)\n\nCopyright (c) 2014 Oleksandr Melnykov\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+    <string name="drawertemplate_credit">Copyright (c) 2014 Pedro Oliveira\n\nLicensed under the Apache License, Version 2.0</string>
+    <string name="app_license">The MIT License (MIT)\n\nCopyright (c) 2012-2015 pzheng.me\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
 
+    <string-array name="pref_delay_list">
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>15 seconds</item>
+        <item>20 seconds</item>
+    </string-array>
+    <string-array name="pref_delay_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="pref_max_retries_list">
+        <item>5 times</item>
+        <item>10 times</item>
+        <item>20 times</item>
+        <item>30 times</item>
+        <item>Keep trying until connected</item>
+    </string-array>
+    <string-array name="pref_max_retries_values">
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>80000000</item>
+    </string-array>
+    <string-array name="pref_website_list">
+        <item>Baidu</item>
+        <item>Google</item>
+    </string-array>
+    <string-array name="pref_website_urls">
+        <item>http://www.baidu.com</item>
+        <item>http://www.google.com</item>
+    </string-array>
 </resources>

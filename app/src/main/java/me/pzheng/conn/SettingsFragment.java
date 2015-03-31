@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.preference.PreferenceFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,7 @@ import android.view.ViewGroup;
  * Use the {@link SettingsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SettingsFragment extends Fragment {
+public class SettingsFragment extends PreferenceFragment {
     public static final String TAG = "settings";
 
     // TODO: Rename parameter arguments, choose names that match
@@ -60,9 +61,14 @@ public class SettingsFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        ((MainActivity) getActivity())
+                .setActionBarTitle("Settings");
+
+        addPreferencesFromResource(R.xml.preferences);
     }
 
-    @Override
+    /*  @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -72,7 +78,7 @@ public class SettingsFragment extends Fragment {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_settings, container, false);
-    }
+    } */
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

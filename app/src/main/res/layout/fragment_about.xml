@@ -13,13 +13,18 @@
             android:layout_height="fill_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\n"
+                android:paddingTop="10sp"/>
+
             <ImageView
-                android:layout_width="180dp"
-                android:layout_height="180dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:id="@+id/logo_icon"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/logo_icon"
-                android:paddingTop="20sp"
                 android:paddingBottom="20sp"/>
 
             <TextView
@@ -65,43 +70,23 @@
                 android:paddingBottom="2dp"
                 android:paddingTop="2dp"/>
 
-            <TextView
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/license"
-                android:layout_gravity="center_horizontal"
-                android:text="License"
-                android:textStyle="bold"
-                android:textSize="20sp"
                 android:paddingTop="10sp"
-                android:paddingBottom="10sp"/>
+                android:text="Credits"
+                android:id="@+id/credits_button"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onClickCredits"/>
 
-            <TextView
-                android:layout_width="match_parent"
+            <Button
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="&#8226; FloatingActionButton"
-                android:paddingLeft="20sp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="https://github.com/makovkastar/FloatingActionButton"
-                android:autoLink="web"
-                android:paddingLeft="28sp"
-                android:paddingBottom="10sp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="&#8226; android-material-drawer-template"
-                android:paddingLeft="20sp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="https://github.com/kanytu/android-material-drawer-template"
-                android:autoLink="web"
-                android:paddingLeft="28sp"/>
+                android:paddingTop="10sp"
+                android:text="License"
+                android:id="@+id/license_button"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onClickLicense"/>
 
         </LinearLayout>
     </ScrollView>

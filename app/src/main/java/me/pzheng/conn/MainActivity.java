@@ -3,6 +3,7 @@ package me.pzheng.conn;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -10,6 +11,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.Toast;
 import android.view.View;
 
@@ -113,6 +115,15 @@ public class MainActivity extends ActionBarActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            Fragment fragment;
+            fragment = fm.findFragmentByTag(SettingsFragment.TAG);
+            if (fragment == null) {
+                fragment = new SettingsFragment();
+            }
+            transaction.replace(R.id.container, fragment, SettingsFragment.TAG).commit();
             return true;
         }
 
@@ -137,4 +148,15 @@ public class MainActivity extends ActionBarActivity
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
     }
+
+    public void onClickCredits(View view) {
+        Intent intent = new Intent(this, DisplayCreditsActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickLicense(View view) {
+        Intent intent = new Intent(this, DisplayLicenseActivity.class);
+        startActivity(intent);
+    }
+
 }

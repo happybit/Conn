@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Timing"
+        android:key="pref_key_timing">
+        <ListPreference
+            android:key="pref_key_delay_setting"
+            android:title="Delay between retries"
+            android:dialogTitle="Please choose an appropriate delay"
+            android:entries="@array/pref_delay_list"
+            android:entryValues="@array/pref_delay_values"
+            android:defaultValue="10" />
+        <ListPreference
+            android:key="pref_key_max_retry_times"
+            android:title="Maximum retry times"
+            android:entries="@array/pref_max_retries_list"
+            android:entryValues="@array/pref_max_retries_values"
+            android:defaultValue="10"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Network Availability"
+        android:key="pref_key_network_availability">
+        <CheckBoxPreference
+            android:key="pref_key_ping_website"
+            android:summary="To check the real internet connection"
+            android:title="Ping website after data is connected"
+            android:defaultValue="false" />
+        <ListPreference
+            android:dependency="pref_key_ping_website"
+            android:key="pref_key_website_list"
+            android:title="Choose a website to ping"
+            android:summary="Need to enable ping website function firstly"
+            android:dialogTitle="The nearest one is best"
+            android:entries="@array/pref_website_list"
+            android:entryValues="@array/pref_website_urls"
+            android:defaultValue="http://www.baidu.com" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
