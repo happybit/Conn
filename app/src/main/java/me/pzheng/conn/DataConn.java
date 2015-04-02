@@ -1,9 +1,11 @@
 package me.pzheng.conn;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.util.Log;
 
@@ -12,6 +14,9 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.SocketAddress;
 
 /**
  * Created by k on 3/29/15.
@@ -20,12 +25,16 @@ import java.lang.reflect.Method;
 public class DataConn {
 
     static Context mContext;
+    SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(mContext);
 
     public DataConn(Context mContext) {
         this.mContext = mContext;
     }
 
     public Boolean[] connecting() {
+        int maxRetryTimes = Integer.parseInt(sharedPref.getString("pref_key_max_retry_times", "10"));
+        int retryDelay = Integer.parseInt(sharedPref.getString("pref_key_delay_setting","10"));
+
         Boolean[] connectResults;
         connectResults = new Boolean[3];
         connectResults[0] = true; // status of Airplane Mode
@@ -41,36 +50,67 @@ public class DataConn {
             connectResults[0] = false;
             connectResults[2] = false;
             int i = 0;
-            int MAXRETRY = 10;
+            // int maxRetryTimes= 10;
+            // int retryDelay = 10000;
 
             setMobileDataConnection(false);
             waitFor(5000);
 
 
-            while ((!isDataConnected())&&(i<MAXRETRY)) {
+            while ((i<maxRetryTimes)&&((!isDataConnected())||(!isNetworkAvailable()))) {
 
-                Log.d("ADebugTag", "Value: " + String.valueOf(isDataConnected()));
-                Log.d("ADebugTag", "Value: " + String.valueOf(i));
+                Log.d("ADebugTag", "If data is connected? " + String.valueOf(isDataConnected()));
+                Log.d("ADebugTag", "Start to connect. Times: " + String.valueOf(i+1));
 
                 setMobileDataConnection(false);
                 waitFor(20);
                 setMobileDataConnection(true);
-                Log.d("ADebugTag", "Connected finished!");
-                waitFor(10000);
-                Log.d("ADebugTag", "Waiting finished!");
-                i+=1;
+                Log.d("ADebugTag", "Connected finished! Times: " + String.valueOf(i+1));
+                waitFor(retryDelay);
+                i++;
 
-                if (isDataConnected()) {
+                if (isDataConnected()&&isNetworkAvailable()) {
                     connectResults[1] = true;
                     return connectResults;
                 }
-                else if (i == MAXRETRY) {
+                else if (i == maxRetryTimes) {
+                    connectResults[1] = false;
                     return connectResults;
                 }
             }
         }
         return connectResults;
     }
+
+    public boolean isNetworkAvailable() {
+
+        boolean isNeedToPingWebsite = sharedPref.getBoolean("pref_key_ping_website", false);
+
+        if (isNeedToPingWebsite) {
+            String url = sharedPref.getString("pref_key_ping_website_list","www.baidu.com");
+
+            try{
+                // ping to google to check internet connectivity
+                //String url = "www.baidu.com";
+                Log.d("ADebugTag", "Start to ping website: " + url);
+                Socket socket = new Socket();
+                SocketAddress socketAddress = new InetSocketAddress(url, 80);
+                socket.connect(socketAddress, 10000);
+                socket.close();
+                Log.d("ADebugTag", "Ping finished and successful.");
+                return true;
+            } catch (Exception e) {
+                // internet not working
+                Log.d("ADebugTag", String.valueOf(e));
+                Log.d("ADebugTag", "Ping finished but failed.");
+                return false;
+            }
+        } else {
+            return true;
+        }
+
+    }
+
     private boolean isDataConnected() {
         ConnectivityManager connMgr = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
@@ -139,7 +179,7 @@ public class DataConn {
 
     public static void setMobileDataConnection(Boolean connectionMode) {
         try {
-            Log.d("ADebugTag", "Try to connect: " + String.valueOf(connectionMode));
+            Log.d("ADebugTag", "Connect or disconnect? " + String.valueOf(connectionMode));
             setMobileDataEnabled(mContext, connectionMode);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -155,9 +195,9 @@ public class DataConn {
     }
     private void waitFor(int duration) {
         try {
-            Log.d("ADebugTag", "Waiting for" + String.valueOf(duration) + "ms started!");
+            Log.d("ADebugTag", "Waiting for " + String.valueOf(duration) + "ms started!");
             Thread.sleep(duration);
-            Log.d("ADebugTag", "Waiting for" + String.valueOf(duration) + "ms finished!");
+            Log.d("ADebugTag", "Waiting for " + String.valueOf(duration) + "ms finished!");
         } catch (InterruptedException e) {
             e.printStackTrace();
             // handle the exception...

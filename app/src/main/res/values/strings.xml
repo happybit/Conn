@@ -43,21 +43,19 @@
         <item>10 times</item>
         <item>20 times</item>
         <item>30 times</item>
-        <item>Keep trying until connected</item>
     </string-array>
     <string-array name="pref_max_retries_values">
         <item>5</item>
         <item>10</item>
         <item>20</item>
         <item>30</item>
-        <item>80000000</item>
     </string-array>
     <string-array name="pref_website_list">
         <item>Baidu</item>
         <item>Google</item>
     </string-array>
     <string-array name="pref_website_urls">
-        <item>http://www.baidu.com</item>
-        <item>http://www.google.com</item>
+        <item>www.baidu.com</item>
+        <item>www.google.com</item>
     </string-array>
 </resources>

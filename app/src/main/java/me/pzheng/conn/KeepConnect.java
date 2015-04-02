@@ -52,15 +52,14 @@ public class KeepConnect extends AsyncTask<Void, Void, Boolean[]> {
 
     @Override
     protected void onPreExecute() {
-        progressDialog.setMessage("Connecting...");
+        // TODO: spinner doesn't appear on Samsung Galaxy S5 Android Lollipop;
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setMessage("Please wait while connecting...");
+        progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
         progressDialog.show();
     }
 
-    @Override
-    protected void onProgressUpdate(Void... values) {
-
-    }
 
     private void showToast(CharSequence displayedText) {
         int duration = Toast.LENGTH_SHORT;

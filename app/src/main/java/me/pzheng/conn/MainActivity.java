@@ -4,11 +4,14 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -56,7 +59,9 @@ public class MainActivity extends ActionBarActivity
                 if (fragment == null) {
                     fragment = new ConnectFragment();
                 }
-                transaction.replace(R.id.container, fragment, ConnectFragment.TAG).commit();
+                transaction.replace(R.id.container, fragment, ConnectFragment.TAG);
+                transaction.addToBackStack(null);
+                transaction.commit();
                 break;
             case 1: //settings
                 /* fragment = getFragmentManager().findFragmentByTag(StatsFragment.TAG);
@@ -68,14 +73,18 @@ public class MainActivity extends ActionBarActivity
                 if (fragment == null) {
                     fragment = new SettingsFragment();
                 }
-                transaction.replace(R.id.container, fragment, SettingsFragment.TAG).commit();
+                transaction.replace(R.id.container, fragment, SettingsFragment.TAG);
+                transaction.addToBackStack(null);
+                transaction.commit();
                 break;
             case 2: //about
                 fragment = fm.findFragmentByTag(AboutFragment.TAG);
                 if (fragment == null) {
                     fragment = new AboutFragment();
                 }
-                transaction.replace(R.id.container, fragment, AboutFragment.TAG).commit();
+                transaction.replace(R.id.container, fragment, AboutFragment.TAG);
+                transaction.addToBackStack(null);
+                transaction.commit();
                 break;
         }
 
@@ -86,9 +95,12 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public void onBackPressed() {
+        FragmentManager fragmentManager = getFragmentManager();
         if (mNavigationDrawerFragment.isDrawerOpen())
             mNavigationDrawerFragment.closeDrawer();
-        else
+        else if (fragmentManager.getBackStackEntryCount() > 1) {
+            fragmentManager.popBackStack();
+        } else
             super.onBackPressed();
     }
 
@@ -123,7 +135,9 @@ public class MainActivity extends ActionBarActivity
             if (fragment == null) {
                 fragment = new SettingsFragment();
             }
-            transaction.replace(R.id.container, fragment, SettingsFragment.TAG).commit();
+            transaction.replace(R.id.container, fragment, SettingsFragment.TAG);
+            transaction.addToBackStack(null);
+            transaction.commit();
             return true;
         }
 
@@ -133,7 +147,7 @@ public class MainActivity extends ActionBarActivity
     public void dataOn(View view) {
         DataConn dataConnOn = new DataConn(this);
         dataConnOn.setMobileDataConnection(true);
-    }
+   }
 
     public void dataOff(View view) {
         DataConn dataConnOff = new DataConn(this);

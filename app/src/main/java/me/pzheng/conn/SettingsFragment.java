@@ -68,17 +68,13 @@ public class SettingsFragment extends PreferenceFragment {
         addPreferencesFromResource(R.xml.preferences);
     }
 
-    /*  @Override
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        // Set title bar
-        ((MainActivity) getActivity())
-                .setActionBarTitle("Setting");
-
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false);
-    } */
+        View view = super.onCreateView(inflater, container, savedInstanceState);
+        ((MainActivity) getActivity()).setActionBarTitle("Settings");
+        return view;
+    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
