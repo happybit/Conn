@@ -4,7 +4,7 @@ layout: index
 
 # Intro
 
-[**Conn**](http://conn.pzheng.me), with Android material design interface, aims to connect mobile data with only one click in poor quality signal situation for Android devices. No need to manually connect/disconnect the data network over and over again. Neither to acknowledge the annoyed warning dialog from most manufactures about incurring addition charges everytime you try to connect data network.
+[**Conn**](http://conn.pzheng.me), with Android material design interface, aims to connect mobile data with only one click in poor quality signal situation for Android devices. No need to manually connect/disconnect the data network over and over again. Neither to acknowledge the annoying warning dialog from most manufactures about incurring addition charges everytime you try to connect data network.
 
 # Notice
 
