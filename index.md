@@ -2,7 +2,9 @@
 layout: index
 ---
 
-# Conn
+# Intro
+
+Conn is a tiny Android app for continuous mobile data connecting.
 
 # Usage
 
@@ -11,3 +13,5 @@ layout: index
 # Credits
 
 # License
+
+# ChangeLog
