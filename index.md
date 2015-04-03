@@ -20,7 +20,7 @@ layout: index
 1. Click the floating button on the lower right corner to connect mobile data network. A notificaiton may be prompted if the phone has already connected to network via WiFi or in Airplane mode;
 2. Or you can just add the widget to your home sceen which might be more convenient;
 3. "On"/"Off" button will allow you to connect/disconnect mobile data for once;
-5. 4. In "Settings", you can set delay between retries as well as maximum retry times. We recommend 10 seconds delays and max 10 times retries on average.
+4. In "Settings", you can set delay between retries as well as maximum retry times. We recommend 10 seconds delays and max 10 times retries on average.
 5. Sometimes the device might be fell into "Zombie Network" state, which means it cannot access to the internet even though the data network appears "connected". You can enable the function in "Settings" to verify the connectivity by ping the website. Now [Baidu](http://www.baidu.com) and [Google](http://www.google.com) are supported. Please notice _you may incur additional charges when using this funcion_.
 
 # Screenshots
