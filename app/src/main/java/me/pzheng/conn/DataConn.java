@@ -25,10 +25,11 @@ import java.net.SocketAddress;
 public class DataConn {
 
     static Context mContext;
-    SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(mContext);
+    SharedPreferences sharedPref;
 
     public DataConn(Context mContext) {
         this.mContext = mContext;
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(mContext);
     }
 
     public Boolean[] connecting() {

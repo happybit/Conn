@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/home/k/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/pre-dexed/debug/library-2.4.0-9b25926bc7699935689be1f1bc56da3d00e20477.jar" />
-    </item>
-    <item
-        jar="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/pre-dexed/debug/classes-d8d8a538630c2b33a476cc96013c262c88d32444.jar" />
-    </item>
-    <item
-        jar="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/pre-dexed/debug/classes-f3c71470a84f01442abb2f91485c57151f1d0da5.jar" />
-    </item>
-    <item
-        jar="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/exploded-aar/com.melnykov/floatingactionbutton/1.1.0/classes.jar"
+        jar="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\exploded-aar\com.melnykov\floatingactionbutton\1.1.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="ee9ae2b87d57a33a7381c75d54db12bdf2995656">
-        <dex dex="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/pre-dexed/debug/classes-faa96e4bd083a205986b84f730601665d18560e3.jar" />
+        <dex dex="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\pre-dexed\release\classes-31619d2ef89ea0a58eff8050ad0c81903e56ef01.jar" />
     </item>
     <item
-        jar="/opt/android-sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jar="D:\Backup\Software\Develop\android_sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-1cd1039154f1bb9cc0d4a9da3e8b7ec509fd8b06.jar" />
+        <dex dex="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\pre-dexed\release\support-annotations-21.0.3-6ec9130006586a808a53192b2029d3aaee6c5dd8.jar" />
     </item>
     <item
-        jar="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
+        jar="D:\userdata\pzheng\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\pre-dexed\release\library-2.4.0-7c882a7f80c29cf04f56998092587a1416640eaa.jar" />
+    </item>
+    <item
+        jar="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
-        <dex dex="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/pre-dexed/debug/classes-35b096303b7c42ab9c60735afc424244bdfdba0b.jar" />
+        <dex dex="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\pre-dexed\release\classes-e42e414c4615f7f3cabb76c720b8c8526539fbce.jar" />
     </item>
     <item
-        jar="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jar="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\pre-dexed\release\classes-a2479dbdfb34665dfb07913e94e8edac7f261c3f.jar" />
+    </item>
+    <item
+        jar="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/home/k/Dropbox/Workspace/Program/Android/Conn/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-084decbcfcb1596a4307a5a4cf95ea61a50ecaa2.jar" />
+        <dex dex="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\pre-dexed\release\internal_impl-21.0.3-1d36ed4a6d48c05f2d48a71ec7d5f845ab43749d.jar" />
+    </item>
+    <item
+        jar="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="D:\Dropbox\Workspace\Program\Android\Conn\app\build\intermediates\pre-dexed\release\classes-c2a7f64d277d2f523fcb29628c234f39a77304a6.jar" />
     </item>
 
 </items>
