@@ -8,7 +8,8 @@ layout: index
 
 # Notice
 
-1. For devices with Android Lollipop or above, it requires root privilege since the method working on pre-Lollipop to enable/disable mobile data has been [deprecated](https://code.google.com/p/android/issues/detail?can=2&start=0&num=100&q=&colspec=ID%20Type%20Status%20Owner%20Summary%20Stars&groupby=&sort=&id=78084) from Android 5.0 API.
+1. **Conn supports Android 4.1.2 onwards**;
+2. For devices with Android Lollipop or above, it requires root privilege since the method working on pre-Lollipop to enable/disable mobile data has been [deprecated](https://code.google.com/p/android/issues/detail?can=2&start=0&num=100&q=&colspec=ID%20Type%20Status%20Owner%20Summary%20Stars&groupby=&sort=&id=78084) from Android 5.0 API.
 2. In order to reteive/change network state, you need to grant below permissions:
   * CHANGE_NETWORK_STATE;
   * ACCESS_NETWORK_STATE;
@@ -21,7 +22,7 @@ layout: index
 2. Or you can just add the widget to your home sceen which might be more convenient;
 3. "On"/"Off" button will allow you to connect/disconnect mobile data for once;
 4. In "Settings", you can set delay between retries as well as maximum retry times. We recommend 10 seconds delays and max 10 times retries on average.
-5. Sometimes the device might be fell into "Zombie Network" state, which means it cannot access to the internet even though the data network appears "connected". You can enable the function in "Settings" to verify the connectivity by ping the website. Now [Baidu](http://www.baidu.com) and [Google](http://www.google.com) are supported. Please notice _you may incur additional charges when using this funcion_.
+5. Sometimes the device might be fell into "Zombie Network" state, which means it cannot access to the internet even though the data network appears "connected". You can enable the function in "Settings" to verify the connectivity by ping the website. Now [Baidu](http://www.baidu.com) and [Google](http://www.google.com) are supported. Please notice **you may incur additional charges when using this funcion**.
 
 # Screenshots
 
